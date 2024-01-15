@@ -4,7 +4,6 @@ package com.mycompany.tictactoeproject;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author aysye9035
@@ -14,9 +13,9 @@ public class TicTacToeFrame extends javax.swing.JFrame {
     /**
      * Creates new form TicTacToeFrame
      */
-    
-    int turn =2;
-    int buttonused[] = {0,0,0,0,0,0,0,0,0};
+    int turn = 2;
+    int buttonused[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+
     public TicTacToeFrame() {
         initComponents();
     }
@@ -228,13 +227,10 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         // TODO add your handling code here:
-               if(turn%2==0)
-        {
+        if (turn % 2 == 0) {
             turn++;
             b4.setText("X");
-        }
-        else
-        {
+        } else {
             turn++;
             b4.setText("O");
         }
@@ -242,13 +238,10 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
         // TODO add your handling code here:
-               if(turn%2==0)
-        {
+        if (turn % 2 == 0) {
             turn++;
             b5.setText("X");
-        }
-        else
-        {
+        } else {
             turn++;
             b5.setText("O");
         }
@@ -256,13 +249,10 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         // TODO add your handling code here:
-               if(turn%2==0)
-        {
+        if (turn % 2 == 0) {
             turn++;
             b6.setText("X");
-        }
-        else
-        {
+        } else {
             turn++;
             b6.setText("O");
         }
@@ -270,13 +260,10 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         // TODO add your handling code here:
-               if(turn%2==0)
-        {
+        if (turn % 2 == 0) {
             turn++;
             b3.setText("X");
-        }
-        else
-        {
+        } else {
             turn++;
             b3.setText("O");
         }
@@ -284,13 +271,10 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
         // TODO add your handling code here:
-               if(turn%2==0)
-        {
+        if (turn % 2 == 0) {
             turn++;
             b7.setText("X");
-        }
-        else
-        {
+        } else {
             turn++;
             b7.setText("O");
         }
@@ -298,31 +282,24 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         // TODO add your handling code here:
-        if(buttonused[0]==0)
-        {
-            if(turn%2==0)
-        {
-            turn++;
-            b1.setText("X");
+        if (buttonused[0] == 0) {
+            if (turn % 2 == 0) {
+                turn++;
+                b1.setText("X");
+            } else {
+                turn++;
+                b1.setText("O");
+            }
         }
-        else
-        {
-            turn++;
-            b1.setText("O");
-        }
-        }
-        
+
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
         // TODO add your handling code here:
-               if(turn%2==0)
-        {
+        if (turn % 2 == 0) {
             turn++;
             b9.setText("X");
-        }
-        else
-        {
+        } else {
             turn++;
             b9.setText("O");
         }
@@ -330,13 +307,10 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
         // TODO add your handling code here:
-               if(turn%2==0)
-        {
+        if (turn % 2 == 0) {
             turn++;
             b8.setText("X");
-        }
-        else
-        {
+        } else {
             turn++;
             b8.setText("O");
         }
@@ -348,13 +322,10 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         // TODO add your handling code here:
-               if(turn%2==0)
-        {
+        if (turn % 2 == 0) {
             turn++;
             b2.setText("X");
-        }
-        else
-        {
+        } else {
             turn++;
             b2.setText("O");
         }
