@@ -16,6 +16,12 @@ public class TicTacToeFrame extends javax.swing.JFrame {
     /**
      * Creates new form TicTacToeFrame
      */
+    private String startgame = "X";
+    private int xcount = 0;
+    private int ocount = 0;
+    boolean checker;
+    
+    
     int turn = 2;
     int buttonused[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 
@@ -23,6 +29,25 @@ public class TicTacToeFrame extends javax.swing.JFrame {
         initComponents();
     }
 
+    private void gameScore()
+    {
+        jbtplayerX.setText(String.valueOf(xcount));
+        jbtplayerO.setText(String.valueOf(ocount));
+
+    }
+    private void choose_a_Player()
+    {
+        if(startgame.equalsIgnoreCase("X"))
+        {
+            startgame = "O";
+        }
+        else
+        {
+            startgame = "X";
+        }
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,12 +69,13 @@ public class TicTacToeFrame extends javax.swing.JFrame {
         b9 = new javax.swing.JButton();
         b3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jbtplayerX = new javax.swing.JButton();
+        jbtplayerO = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jlblplayerX = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        newgame = new javax.swing.JButton();
+        jbtnnewgame = new javax.swing.JButton();
         jbtExit = new javax.swing.JButton();
         jbtnReset = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -172,25 +198,29 @@ public class TicTacToeFrame extends javax.swing.JFrame {
                     .addComponent(b9, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                     .addComponent(b8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(b7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
-        jButton1.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
-        jButton1.setText("0");
+        jbtplayerX.setBackground(new java.awt.Color(0, 153, 153));
+        jbtplayerX.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
+        jbtplayerX.setText("0");
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 153));
-        jButton2.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
-        jButton2.setText("0");
+        jbtplayerO.setBackground(new java.awt.Color(0, 153, 153));
+        jbtplayerO.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
+        jbtplayerO.setText("0");
 
         jLabel2.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
         jLabel2.setText("PLAYER O :");
 
-        jLabel3.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
-        jLabel3.setText("PLAYER X :");
+        jlblplayerX.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
+        jlblplayerX.setText("PLAYER X :");
+
+        jLabel4.setFont(new java.awt.Font("Russo One", 0, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Wins");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -198,33 +228,43 @@ public class TicTacToeFrame extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                            .addComponent(jlblplayerX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbtplayerO, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
+                            .addComponent(jbtplayerX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
+                .addGap(7, 7, 7)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblplayerX, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                    .addComponent(jbtplayerX, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtplayerO, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        newgame.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
-        newgame.setText("NEW GAME");
+        jbtnnewgame.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
+        jbtnnewgame.setText("NEW GAME");
+        jbtnnewgame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnnewgameActionPerformed(evt);
+            }
+        });
 
         jbtExit.setFont(new java.awt.Font("Russo One", 1, 36)); // NOI18N
         jbtExit.setText("EXIT");
@@ -249,19 +289,18 @@ public class TicTacToeFrame extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(newgame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnnewgame, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jbtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtExit, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 19, Short.MAX_VALUE)))
+                        .addComponent(jbtExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap(11, Short.MAX_VALUE)
-                .addComponent(newgame, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnnewgame, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -461,6 +500,43 @@ public class TicTacToeFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_b1ActionPerformed
 
+    private void jbtnnewgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnnewgameActionPerformed
+        // TODO add your handling code here:
+        b1.setEnabled(true);
+        b2.setEnabled(true);
+        b3.setEnabled(true);
+        b4.setEnabled(true);
+        b5.setEnabled(true);
+        b6.setEnabled(true);
+        b7.setEnabled(true);
+        b8.setEnabled(true);
+        b9.setEnabled(true);
+        
+        jbtplayerX.setText("0");
+        jbtplayerO.setText("0");
+        
+        b1.setText("");
+        b2.setText("");
+        b3.setText("");
+        b4.setText("");
+        b5.setText("");
+        b6.setText("");
+        b7.setText("");
+        b8.setText("");
+        b9.setText("");
+        
+        
+        b1.setBackground(Color.white);
+        b2.setBackground(Color.white);
+        b3.setBackground(Color.white);
+        b4.setBackground(Color.white);
+        b5.setBackground(Color.white);
+        b6.setBackground(Color.white);
+        b7.setBackground(Color.white);
+        b8.setBackground(Color.white);
+        b9.setBackground(Color.white);
+    }//GEN-LAST:event_jbtnnewgameActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -506,17 +582,18 @@ public class TicTacToeFrame extends javax.swing.JFrame {
     private javax.swing.JButton b7;
     private javax.swing.JButton b8;
     private javax.swing.JButton b9;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JButton jbtExit;
     private javax.swing.JButton jbtnReset;
-    private javax.swing.JButton newgame;
+    private javax.swing.JButton jbtnnewgame;
+    private javax.swing.JButton jbtplayerO;
+    private javax.swing.JButton jbtplayerX;
+    private javax.swing.JLabel jlblplayerX;
     // End of variables declaration//GEN-END:variables
 }
