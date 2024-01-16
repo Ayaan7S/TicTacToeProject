@@ -9,7 +9,7 @@ import javax.swing.JFrame;
  */
 /**
  *
- * @author aysye9035
+ * @author aysye9035 Ayaan
  */
 public class TicTacToeFrame extends javax.swing.JFrame {
 
