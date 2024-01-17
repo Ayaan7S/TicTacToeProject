@@ -2,6 +2,7 @@ package com.mycompany.tictactoeproject;
 
 import java.awt.Color;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -45,6 +46,30 @@ public class TicTacToeFrame extends javax.swing.JFrame {
         {
             startgame = "X";
         }
+    }
+    private void winningGame()
+    {
+        String button1 = b1.getText();
+        String button2 = b1.getText();
+        String button3 = b1.getText();
+        String button4 = b1.getText();
+        String button5 = b1.getText();       
+        String button6 = b1.getText();        
+        String button7 = b1.getText();
+        String button8 = b1.getText();
+        String button9 = b1.getText();
+                
+        if (button1 == ("X") && button2 == ("X") && button3 == ("X"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b1.setBackground(Color.pink);
+            b2.setBackground(Color.pink);
+            b3.setBackground(Color.pink);
+            xcount++;
+            gameScore();
+        }
+                
+                
     }
     
     
@@ -360,9 +385,15 @@ public class TicTacToeFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+private JFrame frame;
     private void jbtExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtExitActionPerformed
-        System.exit(0);
+        frame = new JFrame("Exit");
+        if(JOptionPane.showConfirmDialog(frame,"Confirm if you want to exit", "Tic Tac Toe",
+                JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION)
+        {
+           System.exit(0); 
+        }
+        
         
     }//GEN-LAST:event_jbtExitActionPerformed
 
