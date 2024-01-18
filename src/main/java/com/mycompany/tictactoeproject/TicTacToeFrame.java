@@ -50,14 +50,14 @@ public class TicTacToeFrame extends javax.swing.JFrame {
     private void winningGame()
     {
         String button1 = b1.getText();
-        String button2 = b1.getText();
-        String button3 = b1.getText();
-        String button4 = b1.getText();
-        String button5 = b1.getText();       
-        String button6 = b1.getText();        
-        String button7 = b1.getText();
-        String button8 = b1.getText();
-        String button9 = b1.getText();
+        String button2 = b2.getText();
+        String button3 = b3.getText();
+        String button4 = b4.getText();
+        String button5 = b5.getText();       
+        String button6 = b6.getText();        
+        String button7 = b7.getText();
+        String button8 = b8.getText();
+        String button9 = b9.getText();
                 
         if (button1 == ("X") && button2 == ("X") && button3 == ("X"))
         {
@@ -68,8 +68,153 @@ public class TicTacToeFrame extends javax.swing.JFrame {
             xcount++;
             gameScore();
         }
-                
-                
+        
+
+        if (button4 == ("X") && button5 == ("X") && button6 == ("X"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b4.setBackground(Color.cyan);
+            b5.setBackground(Color.cyan);
+            b6.setBackground(Color.cyan);
+            xcount++;
+            gameScore();
+        }        
+           
+        if (button7 == ("X") && button8 == ("X") && button9 == ("X"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b7.setBackground(Color.pink);
+            b8.setBackground(Color.pink);
+            b9.setBackground(Color.pink);
+            xcount++;
+            gameScore();
+        }      
+        
+        if (button1 == ("X") && button4 == ("X") && button7 == ("X"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b1.setBackground(Color.cyan);
+            b4.setBackground(Color.cyan);
+            b7.setBackground(Color.cyan);
+            xcount++;
+            gameScore();
+        }
+        if (button2 == ("X") && button5 == ("X") && button8 == ("X"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b2.setBackground(Color.green);
+            b5.setBackground(Color.green);
+            b8.setBackground(Color.green);
+            xcount++;
+            gameScore();
+        } 
+        if (button3 == ("X") && button6 == ("X") && button9 == ("X"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b3.setBackground(Color.pink);
+            b6.setBackground(Color.pink);
+            b9.setBackground(Color.pink);
+            xcount++;
+            gameScore();
+        }
+        if (button1== ("X") && button5 == ("X") && button9 == ("X"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b1.setBackground(Color.pink);
+            b5.setBackground(Color.pink);
+            b9.setBackground(Color.pink);
+            xcount++;
+            gameScore();
+        }
+        if (button3 == ("X") && button5 == ("X") && button7 == ("X"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b3.setBackground(Color.pink);
+            b5.setBackground(Color.pink);
+            b7.setBackground(Color.pink);
+            xcount++;
+            gameScore();
+        }
+       //-----------------------------------------------------------------------------------------------------------------------------
+       //Winning code for the letter "O"
+       if (button1 == ("O") && button2 == ("O") && button3 == ("O"))
+        {
+            JOptionPane.showMessageDialog(this, "Player O Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b1.setBackground(Color.pink);
+            b2.setBackground(Color.pink);
+            b3.setBackground(Color.pink);
+            ocount++;
+            gameScore();
+        }
+        
+
+        if (button4 == ("O") && button5 == ("O") && button6 == ("O"))
+        {
+            JOptionPane.showMessageDialog(this, "Player O Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b4.setBackground(Color.cyan);
+            b5.setBackground(Color.cyan);
+            b6.setBackground(Color.cyan);
+            ocount++;
+            gameScore();
+        }        
+           
+        if (button7 == ("O") && button8 == ("O") && button9 == ("O"))
+        {
+            JOptionPane.showMessageDialog(this, "Player X Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b7.setBackground(Color.pink);
+            b8.setBackground(Color.pink);
+            b9.setBackground(Color.pink);
+            ocount++;
+            gameScore();
+        }      
+        
+        if (button1 == ("O") && button4 == ("O") && button7 == ("O"))
+        {
+            JOptionPane.showMessageDialog(this, "Player O Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b1.setBackground(Color.cyan);
+            b4.setBackground(Color.cyan);
+            b7.setBackground(Color.cyan);
+            ocount++;
+            gameScore();
+        }
+        if (button2 == ("O") && button5 == ("O") && button8 == ("O"))
+        {
+            JOptionPane.showMessageDialog(this, "Player O Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b2.setBackground(Color.green);
+            b5.setBackground(Color.green);
+            b8.setBackground(Color.green);
+            ocount++;
+            gameScore();
+        } 
+        if (button3 == ("O") && button6 == ("O") && button9 == ("O"))
+        {
+            JOptionPane.showMessageDialog(this, "Player O Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b3.setBackground(Color.pink);
+            b6.setBackground(Color.pink);
+            b9.setBackground(Color.pink);
+            ocount++;
+            gameScore();
+        }
+        if (button1== ("O") && button5 == ("O") && button9 == ("O"))
+        {
+            JOptionPane.showMessageDialog(this, "Player O Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b1.setBackground(Color.pink);
+            b5.setBackground(Color.pink);
+            b9.setBackground(Color.pink);
+            ocount++;
+            gameScore();
+        }
+        if (button3 == ("O") && button5 == ("O") && button7 == ("O"))
+        {
+            JOptionPane.showMessageDialog(this, "Player O Won","Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+            b3.setBackground(Color.pink);
+            b5.setBackground(Color.pink);
+            b7.setBackground(Color.pink);
+            ocount++;
+            gameScore();
+        }
+       
+        
     }
     
     
@@ -112,63 +257,63 @@ public class TicTacToeFrame extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(0, 153, 153));
         jPanel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        b1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b1.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b1ActionPerformed(evt);
             }
         });
 
-        b2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b2.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b2ActionPerformed(evt);
             }
         });
 
-        b4.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b4.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b4ActionPerformed(evt);
             }
         });
 
-        b5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b5.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b5ActionPerformed(evt);
             }
         });
 
-        b7.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b7.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b7ActionPerformed(evt);
             }
         });
 
-        b8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b8.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b8ActionPerformed(evt);
             }
         });
 
-        b6.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b6.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b6ActionPerformed(evt);
             }
         });
 
-        b9.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b9.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b9ActionPerformed(evt);
             }
         });
 
-        b3.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        b3.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         b3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b3ActionPerformed(evt);
@@ -419,116 +564,142 @@ private JFrame frame;
         b9.setText("");
         
         
-        b1.setBackground(Color.white);
-        b2.setBackground(Color.white);
-        b3.setBackground(Color.white);
-        b4.setBackground(Color.white);
-        b5.setBackground(Color.white);
-        b6.setBackground(Color.white);
-        b7.setBackground(Color.white);
-        b8.setBackground(Color.white);
-        b9.setBackground(Color.white);
+        b1.setBackground(Color.LIGHT_GRAY);
+        b2.setBackground(Color.LIGHT_GRAY);
+        b3.setBackground(Color.LIGHT_GRAY);
+        b4.setBackground(Color.LIGHT_GRAY);
+        b5.setBackground(Color.LIGHT_GRAY);
+        b6.setBackground(Color.LIGHT_GRAY);
+        b7.setBackground(Color.LIGHT_GRAY);
+        b8.setBackground(Color.LIGHT_GRAY);
+        b9.setBackground(Color.LIGHT_GRAY);
     }//GEN-LAST:event_jbtnResetActionPerformed
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         // TODO add your handling code here:
-        if (turn % 2 == 0) {
-            turn++;
-            b3.setText("X");
-        } else {
-            turn++;
-            b3.setText("O");
+        b3.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
         // TODO add your handling code here:
-        if (turn % 2 == 0) {
-            turn++;
-            b9.setText("X");
-        } else {
-            turn++;
-            b9.setText("O");
+        b9.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
     }//GEN-LAST:event_b9ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         // TODO add your handling code here:
-        if (turn % 2 == 0) {
-            turn++;
-            b6.setText("X");
-        } else {
-            turn++;
-            b6.setText("O");
+        b6.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
         // TODO add your handling code here:
-        if (turn % 2 == 0) {
-            turn++;
-            b8.setText("X");
-        } else {
-            turn++;
-            b8.setText("O");
+        b8.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
         // TODO add your handling code here:
-        if (turn % 2 == 0) {
-            turn++;
-            b7.setText("X");
-        } else {
-            turn++;
-            b7.setText("O");
+        b7.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
         // TODO add your handling code here:
-        if (turn % 2 == 0) {
-            turn++;
-            b5.setText("X");
-        } else {
-            turn++;
-            b5.setText("O");
+        b5.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
     }//GEN-LAST:event_b5ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         // TODO add your handling code here:
-        if (turn % 2 == 0) {
-            turn++;
-            b4.setText("X");
-           } else {
-            turn++;
-            b4.setText("O");
+        b4.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         // TODO add your handling code here:
-        if (turn % 2 == 0) {
-            turn++;
-            b2.setText("X");
-        } else {
-            turn++;
-            b2.setText("O");
+        b2.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         // TODO add your handling code here:
-        if (buttonused[0] == 0) {
-            if (turn % 2 == 0) {
-                turn++;
-                b1.setText("X");
-            } else {
-                turn++;
-                b1.setText("O");
-            }
+        b1.setText(startgame);
+        if (startgame.equalsIgnoreCase("X"))
+        {
+            checker = false;
         }
+        else{
+            checker = true;
+        }
+        choose_a_Player();
+        winningGame();
+        
     }//GEN-LAST:event_b1ActionPerformed
 
     private void jbtnnewgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnnewgameActionPerformed
@@ -557,15 +728,15 @@ private JFrame frame;
         b9.setText("");
         
         
-        b1.setBackground(Color.white);
-        b2.setBackground(Color.white);
-        b3.setBackground(Color.white);
-        b4.setBackground(Color.white);
-        b5.setBackground(Color.white);
-        b6.setBackground(Color.white);
-        b7.setBackground(Color.white);
-        b8.setBackground(Color.white);
-        b9.setBackground(Color.white);
+        b1.setBackground(Color.LIGHT_GRAY);
+        b2.setBackground(Color.LIGHT_GRAY);
+        b3.setBackground(Color.LIGHT_GRAY);
+        b4.setBackground(Color.LIGHT_GRAY);
+        b5.setBackground(Color.LIGHT_GRAY);
+        b6.setBackground(Color.LIGHT_GRAY);
+        b7.setBackground(Color.LIGHT_GRAY);
+        b8.setBackground(Color.LIGHT_GRAY);
+        b9.setBackground(Color.LIGHT_GRAY);
     }//GEN-LAST:event_jbtnnewgameActionPerformed
 
     /**

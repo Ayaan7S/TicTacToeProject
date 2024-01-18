@@ -166,7 +166,7 @@
             <Component class="javax.swing.JButton" name="b1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -176,7 +176,7 @@
             <Component class="javax.swing.JButton" name="b2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -186,7 +186,7 @@
             <Component class="javax.swing.JButton" name="b4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -196,7 +196,7 @@
             <Component class="javax.swing.JButton" name="b5">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -206,7 +206,7 @@
             <Component class="javax.swing.JButton" name="b7">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -216,7 +216,7 @@
             <Component class="javax.swing.JButton" name="b8">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -226,7 +226,7 @@
             <Component class="javax.swing.JButton" name="b6">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -236,7 +236,7 @@
             <Component class="javax.swing.JButton" name="b9">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -246,7 +246,7 @@
             <Component class="javax.swing.JButton" name="b3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="36" style="0"/>
+                  <Font name="Times New Roman" size="48" style="0"/>
                 </Property>
               </Properties>
               <Events>
